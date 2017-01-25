@@ -1,0 +1,12 @@
+[Nemo Action]
+Active=true
+Name=MdToHtml
+Comment=Converts Markdown to Html
+Dependencies=/usr/bin/pandoc;
+Exec=<scripts/md2html.sh %F>
+Icon-Name=gtk-execute
+Selection=any
+Extensions=md;
+EscapeSpaces=false
+Separator=,
+Quote=double

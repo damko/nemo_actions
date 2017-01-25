@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=Meld
+Comment=Compares file with meld
+Dependencies=meld;
+Exec=/usr/bin/meld %F
+Icon-Name=meld
+Quote=double
+Selection=m
+Extensions=nodirs;

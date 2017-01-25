@@ -1,0 +1,11 @@
+[Nemo Action]
+Active=true
+Name=MD5 Hash
+Comment=Writes the MD5 signature of the file
+Dependencies=md5sum;
+Exec=<scripts/md5hash.sh '%F'>
+Icon-Name=gtk-execute
+Selection=any
+Extensions=nodirs
+EscapeSpaces=false
+Separator=,

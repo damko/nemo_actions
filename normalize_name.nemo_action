@@ -1,0 +1,12 @@
+[Nemo Action]
+Active=true
+Name=Normalize name
+Comment=Renames files or directories lowercase and no spaces
+Dependencies=xdotool;
+Exec=<scripts/normalize_name.sh %F>
+Icon-Name=gtk-execute
+Selection=any
+Extensions=any;
+EscapeSpaces=false
+Separator=,
+Quote=single

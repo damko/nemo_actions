@@ -1,0 +1,12 @@
+[Nemo Action]
+Active=true
+Name=Unlock
+Comment=Unlocks a file or a directory (recursively)
+Dependencies=chattr;xdotool;
+Exec=<scripts/unlock.sh %F>
+Icon-Name=lock
+Selection=any
+Extensions=any;
+EscapeSpaces=false
+Separator=,
+Quote=double

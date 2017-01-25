@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=Fix permissions recursive
+Comment=Given a folder it recursively set standard permissions (0755 on dirs 0644 on files)
+Exec=<scripts/recursively_set_std_permissions.sh %F>
+Selection=s
+Extensions=dir;
+EscapeSpaces=false
+Quote=double
