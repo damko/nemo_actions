@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=PdfShuffler
+Comment=Runs pdfshuffler on multiple pdfs selection
+Dependencies=pdfshuffler;
+Exec=pdfshuffler %F
+Icon-Name=pdfshuffler
+Quote=double
+Selection=m
+Extensions=nodirs;
