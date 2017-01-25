@@ -1,0 +1,8 @@
+[Nemo Action]
+Active=true
+Name=Open as root
+Comment=Opens any single file as root
+Exec=gksudo xdg-open %F
+Icon-Name=dialog-password
+Selection=s;
+Extensions=nodirs;
