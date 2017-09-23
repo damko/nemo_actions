@@ -22,7 +22,8 @@ do
     html_name="${origin_name}.htm"
     html_file="/tmp/${html_name}"
 
-	echo "pandoc -f markdown ${file} -t html5 --css=${css_dir}/${css_file} --highlight-style=haddock --self-contained --smart -o ${html_file}" > /tmp/pandoc
+	#debug:
+    #echo "pandoc -f markdown ${file} -t html5 --css=${css_dir}/${css_file} --highlight-style=haddock --self-contained --smart -o ${html_file}" > /tmp/pandoc
     pandoc -f markdown ${file} -t html5 --css=${css_dir}/${css_file} --highlight-style=haddock --self-contained --smart -o ${html_file}
     if [ "${?}" != "0" ]; then
         echo "html creation failed for ${origin_name}"
