@@ -1,0 +1,12 @@
+[Nemo Action]
+Active=true
+Name=Encrypt with GPG
+Comment=Encrypts one file while GPG
+Dependencies=/usr/bin/gpg;
+Exec=<scripts/gpg_encr.sh %F>
+Icon-Name=gtk-execute
+Selection=s
+Extensions=any;
+EscapeSpaces=false
+#Separator=,
+Quote=double
