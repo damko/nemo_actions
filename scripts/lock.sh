@@ -5,12 +5,12 @@ clear
 OFS=$IFS
 IFS=','
 
-locked_files_list="/home/damko/locked_files.txt"
+locked_files_list="${HOME}/locked_files.txt"
 
 #${file} is the absolute path of the file
 for file in ${@}
 do
-    echo "Locking ${file}"
+#    echo "Locking ${file}"
 
     # updates GIOVFS (adds the emblem)
     gvfs-set-attribute -t stringv ${file} metadata::emblems "emblem-important"
@@ -35,7 +35,7 @@ do
             echo "${file}" >> ${locked_files_list}
         fi
 
-        echo "Locking ${file} successful"
+ #       echo "Locking ${file} successful"
     else
         # updates GIOVFS (removes the emblem)
         gvfs-set-attribute -t stringv ${file} metadata::emblems ""
@@ -50,7 +50,7 @@ do
             done
             IFS=','
         fi
-        echo "Locking ${file} failed"
+#        echo "Locking ${file} failed"
         exit 1
     fi
 done

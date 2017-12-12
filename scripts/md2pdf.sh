@@ -13,15 +13,20 @@ IFS=','
 #${file} is the absolute path of the file
 for file in ${@}
 do
-
+    echo ${file} >> /home/damko/tmp/pd
+    origin_dir=$(dirname ${file})
     origin=$(echo ${file}|rev|cut -d/ -f1|rev)
     origin_name=$(echo ${origin}|cut -d. -f1)
 
 
     # generation of the html file
-    html_name="${origin_name}.htm"
-    html_file="/tmp/${html_name}"
+    rand=$((1 + RANDOM % 1000000))
+    html_name="${origin_name}_${rand}.htm"
+#    html_file="/tmp/${html_name}"
+    html_file="${html_name}"
 
+    # This cd is mandatory otherwise pandoc can not render images with relative path
+    cd ${origin_dir}
 	#debug:
     #echo "pandoc -f markdown ${file} -t html5 --css=${css_dir}/${css_file} --highlight-style=haddock --self-contained --smart -o ${html_file}" > /tmp/pandoc
     pandoc -f markdown ${file} -t html5 --css=${css_dir}/${css_file} --highlight-style=haddock --self-contained --smart -o ${html_file}

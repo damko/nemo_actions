@@ -1,0 +1,12 @@
+[Nemo Action]
+Active=true
+Name=Share Pictures
+Comment=Strips pics
+Dependencies=chattr;xdotool;
+Exec=<scripts/share_pictures.sh %F>
+Icon-Name=lock
+Selection=any
+Extensions=jpg;png;bmp;
+EscapeSpaces=false
+Separator=,
+Quote=double
