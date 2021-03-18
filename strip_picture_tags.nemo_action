@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=Strip Picture Tags
+Comment=Strips EXIF tags from pictures
+Exec=<scripts/strip_picture_tags.sh %F>
+Selection=any
+Extensions=jpg;png;bmp;
+EscapeSpaces=false
+Separator=,
+Quote=double

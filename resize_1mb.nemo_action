@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=Resizes JPG to 1MB
+Comment=Given a folder it recursively resizes jpg files to 1MB
+Exec=<scripts/resize_1mb.sh %F>
+Selection=s
+Extensions=dir;
+EscapeSpaces=false
+Quote=double
